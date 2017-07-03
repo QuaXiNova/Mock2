@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FC137ED1F06D9A100A802F8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC137EC1F06D9A100A802F8 /* CustomTableViewCell.swift */; };
 		7FEBE5BF1F057743006A855A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBE5BE1F057743006A855A /* AppDelegate.swift */; };
-		7FEBE5C11F057743006A855A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBE5C01F057743006A855A /* ViewController.swift */; };
-		7FEBE5C41F057743006A855A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FEBE5C21F057743006A855A /* Main.storyboard */; };
 		7FEBE5C61F057743006A855A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEBE5C51F057743006A855A /* Assets.xcassets */; };
 		7FEBE5C91F057743006A855A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FEBE5C71F057743006A855A /* LaunchScreen.storyboard */; };
+		7FEBE5D11F058213006A855A /* SubTabOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBE5D01F058213006A855A /* SubTabOneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FC137EC1F06D9A100A802F8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7FEBE5BB1F057743006A855A /* Mock2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mock2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEBE5BE1F057743006A855A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FEBE5C01F057743006A855A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FEBE5C31F057743006A855A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FEBE5C51F057743006A855A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FEBE5C81F057743006A855A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FEBE5CA1F057743006A855A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FEBE5D01F058213006A855A /* SubTabOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTabOneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				7FEBE5BE1F057743006A855A /* AppDelegate.swift */,
-				7FEBE5C01F057743006A855A /* ViewController.swift */,
-				7FEBE5C21F057743006A855A /* Main.storyboard */,
+				7FEBE5D01F058213006A855A /* SubTabOneViewController.swift */,
+				7FC137EC1F06D9A100A802F8 /* CustomTableViewCell.swift */,
 				7FEBE5C51F057743006A855A /* Assets.xcassets */,
 				7FEBE5C71F057743006A855A /* LaunchScreen.storyboard */,
 				7FEBE5CA1F057743006A855A /* Info.plist */,
@@ -125,7 +125,6 @@
 			files = (
 				7FEBE5C91F057743006A855A /* LaunchScreen.storyboard in Resources */,
 				7FEBE5C61F057743006A855A /* Assets.xcassets in Resources */,
-				7FEBE5C41F057743006A855A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FEBE5C11F057743006A855A /* ViewController.swift in Sources */,
+				7FC137ED1F06D9A100A802F8 /* CustomTableViewCell.swift in Sources */,
+				7FEBE5D11F058213006A855A /* SubTabOneViewController.swift in Sources */,
 				7FEBE5BF1F057743006A855A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +144,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7FEBE5C21F057743006A855A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FEBE5C31F057743006A855A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7FEBE5C71F057743006A855A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,6 +291,7 @@
 				7FEBE5CF1F057743006A855A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
