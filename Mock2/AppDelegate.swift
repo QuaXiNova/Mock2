@@ -23,9 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Allocate memory
         let subTabOneViewController = SubTabOneViewController()
+        let navigationController = UINavigationController(rootViewController: subTabOneViewController)
         
         // Set the root view controller of the app's window
-        window!.rootViewController = subTabOneViewController
+        window!.rootViewController = navigationController
         
         // Make the window visible
         window!.makeKeyAndVisible()
