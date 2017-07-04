@@ -22,10 +22,16 @@ class SubTabOneViewController: UIViewController,  UITableViewDelegate, UITableVi
         
         tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.estimatedRowHeight = 40
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,6 +43,8 @@ class SubTabOneViewController: UIViewController,  UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CustomTableViewCell
         
         cell?.content.text = labels[indexPath.row]
+        cell?.leftButton.isHidden = true
+        cell?.rightButton.isHidden = true
         
         return cell!
     }
@@ -52,15 +60,26 @@ class SubTabOneViewController: UIViewController,  UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !expandedCell.isEmpty && !expandedCell.contains(indexPath) {
             let currIndex = expandedCell.popFirst()
-            // tableView.cellForRow(at: currIndex!)?.height = 0
+            let cell = tableView.cellForRow(at: currIndex!) as? CustomTableViewCell
+            cell?.contentView.constraints[7].constant = 0
+            cell?.leftButton.isHidden = true
+            cell?.rightButton.isHidden = true
         }
-        if !expandedCell.contains(indexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as? CustomTableViewCell
+        if expandedCell.contains(indexPath) {
             expandedCell.remove(indexPath)
-            // tableView.cellForRow(at: indexPath!)?.height = 0
+            cell?.contentView.constraints[7].constant = 0
+            cell?.leftButton.isHidden = true
+            cell?.rightButton.isHidden = true
         } else {
             expandedCell.insert(indexPath)
-            // tableView.cellForRow(at: indexPath!)?.height = 100
+            cell?.contentView.constraints[7].constant = 20
+            cell?.leftButton.isHidden = false
+            cell?.rightButton.isHidden = false
         }
+        
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 
     /*

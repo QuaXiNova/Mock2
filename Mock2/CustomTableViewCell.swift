@@ -13,37 +13,36 @@ class CustomTableViewCell: UITableViewCell {
     var content = UILabel()
     var leftButton = UIButton()
     var rightButton = UIButton()
+    var stackView = UIStackView()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        stackView.addSubview(leftButton)
+        stackView.addSubview(rightButton)
         contentView.addSubview(content)
-        contentView.addSubview(leftButton)
-        contentView.addSubview(rightButton)
-        
-        content.translatesAutoresizingMaskIntoConstraints = false
-        leftButton.translatesAutoresizingMaskIntoConstraints = false
-        rightButton.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(stackView)
         
         let margins = contentView.layoutMarginsGuide
+        
+        content.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
         content.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
         content.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         content.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        content.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 2.0).isActive = true
         content.textAlignment = .center
-        leftButton.topAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
-        leftButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: contentView.frame.width / 5).isActive = true
-        leftButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 2.0).isActive = true
-        rightButton.topAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
-        rightButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -contentView.frame.width / 5).isActive = true
-        rightButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 2.0).isActive = true
+        stackView.topAnchor.constraint(equalTo: content.bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+        contentView.addConstraint(NSLayoutConstraint(item: stackView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0))
         
+        leftButton.frame = CGRect(x: 40, y: 0, width: 80, height: 20)
         leftButton.setTitleColor(.white, for: .normal)
-        leftButton.backgroundColor = self.tintColor
+        rightButton.frame = CGRect(x: 223, y: 0, width: 80, height: 20)
         rightButton.setTitleColor(.white, for: .normal)
-        rightButton.backgroundColor = self.tintColor
-        
+
         leftButton.setTitle("Orange", for: .normal)
         rightButton.setTitle("Blue", for: .normal)
     }
@@ -55,7 +54,8 @@ class CustomTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        leftButton.backgroundColor = self.tintColor
+        rightButton.backgroundColor = self.tintColor
     }
 
 }
