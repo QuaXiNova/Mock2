@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FB48EE41F0D836300AF5C4A /* OrangeBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB48EE31F0D836300AF5C4A /* OrangeBackgroundViewController.swift */; };
+		7FB48EE61F0D83F500AF5C4A /* BlueBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB48EE51F0D83F500AF5C4A /* BlueBackgroundViewController.swift */; };
 		7FC137ED1F06D9A100A802F8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC137EC1F06D9A100A802F8 /* CustomTableViewCell.swift */; };
 		7FEBE5BF1F057743006A855A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEBE5BE1F057743006A855A /* AppDelegate.swift */; };
 		7FEBE5C61F057743006A855A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEBE5C51F057743006A855A /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FB48EE31F0D836300AF5C4A /* OrangeBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeBackgroundViewController.swift; sourceTree = "<group>"; };
+		7FB48EE51F0D83F500AF5C4A /* BlueBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueBackgroundViewController.swift; sourceTree = "<group>"; };
 		7FC137EC1F06D9A100A802F8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7FEBE5BB1F057743006A855A /* Mock2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mock2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEBE5BE1F057743006A855A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				7FEBE5BE1F057743006A855A /* AppDelegate.swift */,
 				7FEBE5D01F058213006A855A /* SubTabOneViewController.swift */,
 				7FC137EC1F06D9A100A802F8 /* CustomTableViewCell.swift */,
+				7FB48EE31F0D836300AF5C4A /* OrangeBackgroundViewController.swift */,
+				7FB48EE51F0D83F500AF5C4A /* BlueBackgroundViewController.swift */,
 				7FEBE5C51F057743006A855A /* Assets.xcassets */,
 				7FEBE5C71F057743006A855A /* LaunchScreen.storyboard */,
 				7FEBE5CA1F057743006A855A /* Info.plist */,
@@ -137,6 +143,8 @@
 			files = (
 				7FC137ED1F06D9A100A802F8 /* CustomTableViewCell.swift in Sources */,
 				7FEBE5D11F058213006A855A /* SubTabOneViewController.swift in Sources */,
+				7FB48EE61F0D83F500AF5C4A /* BlueBackgroundViewController.swift in Sources */,
+				7FB48EE41F0D836300AF5C4A /* OrangeBackgroundViewController.swift in Sources */,
 				7FEBE5BF1F057743006A855A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

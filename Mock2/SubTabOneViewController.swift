@@ -46,6 +46,9 @@ class SubTabOneViewController: UIViewController,  UITableViewDelegate, UITableVi
         cell?.leftButton.isHidden = true
         cell?.rightButton.isHidden = true
         
+        cell?.leftButton.addTarget(self, action: #selector(SubTabOneViewController.openOrange), for: .touchUpInside)
+        cell?.rightButton.addTarget(self, action: #selector(SubTabOneViewController.openBlue), for: .touchUpInside)
+        
         return cell!
     }
     
@@ -81,15 +84,18 @@ class SubTabOneViewController: UIViewController,  UITableViewDelegate, UITableVi
         tableView.beginUpdates()
         tableView.endUpdates()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func openOrange() {
+        let selectedCell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as? CustomTableViewCell
+        OrangeBackgroundViewController.main.cellInfo.text = selectedCell?.content.text
+        
+        self.navigationController?.pushViewController(OrangeBackgroundViewController.main, animated: true)
     }
-    */
-
+    
+    func openBlue() {
+        let selectedCell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as? CustomTableViewCell
+        BlueBackgroundViewController.main.cellInfo.text = selectedCell?.content.text
+        
+        self.navigationController?.pushViewController(BlueBackgroundViewController.main, animated: true)
+    }
 }

@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Initialize the window
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Allocate memory
         let subTabOneViewController = SubTabOneViewController()
-        let navigationController = UINavigationController(rootViewController: subTabOneViewController)
+        navigationController = UINavigationController(rootViewController: subTabOneViewController)
         
         // Set the root view controller of the app's window
         window!.rootViewController = navigationController
